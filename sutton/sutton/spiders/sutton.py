@@ -1,7 +1,7 @@
-import scrapy
 import re
-from scrapy import Request
 from datetime import datetime
+import scrapy
+from scrapy import Request
 from scrapy.shell import inspect_response
 from ..items import SuttonItem
 

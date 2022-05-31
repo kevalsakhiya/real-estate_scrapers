@@ -1,7 +1,7 @@
 import scrapy
 import re
-from scrapy import Request
 from datetime import datetime
+from scrapy import Request
 from ..items import DuproprioItem
 
 

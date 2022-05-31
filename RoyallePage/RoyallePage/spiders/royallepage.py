@@ -1,10 +1,9 @@
 # scrapy crawl rpl
-
-import scrapy
-from scrapy import Request
 import re
 import json
 from datetime import datetime
+import scrapy
+from scrapy import Request
 from scrapy.shell import inspect_response
 from ..items import RoyallepageItem
 

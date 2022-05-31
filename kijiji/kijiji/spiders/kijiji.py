@@ -1,9 +1,9 @@
+import json
+import re
+from datetime import datetime
 import scrapy
 from scrapy import Request
-import json
 from ..items import KijijiItem
-from datetime import datetime
-import re
 from scrapy.shell import inspect_response
 
 

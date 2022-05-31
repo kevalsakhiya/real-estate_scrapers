@@ -1,7 +1,7 @@
 import json
+from datetime import datetime
 import re
 import scrapy
-from datetime import datetime
 from scrapy import Request
 from ..items import CentrisItem
 
