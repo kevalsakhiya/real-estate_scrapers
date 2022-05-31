@@ -2,7 +2,6 @@ import scrapy
 from scrapy import Request
 from ..items import RegistreentreprisesItem
 from datetime import datetime
-<<<<<<< HEAD
 # import pymongo
 
 class RegistreEntreprises(scrapy.Spider):
@@ -10,40 +9,15 @@ class RegistreEntreprises(scrapy.Spider):
     # NEQ_LIST = []
     NEQ_LIST =  [
             '1167061671'
-            # '1140030355',
-            # '1140030363',
-            # '1140031379',
-            # '1140031486',
-            # '1140031510',
-            # '1140031536',
-            # '1140031551',
-            # '1140031908',
+            '1140030355',
+            '1140030363',
+            '1140031379',
+            '1140031486',
+            '1140031510',
+            '1140031536',
+            '1140031551',
+            '1140031908',
             ]
-
-
-import pymongo
-
-class RegistreEntreprises(scrapy.Spider):
-    name = 'reg'
-    NEQ_LIST = []
-
-    def __init__(self):
-        try:
-            makingConnection = pymongo.MongoClient(
-                    'mongodb://pusher_rw:j74CMvuLPHLCxdK5yyLw@ec2-99-79-53-153.ca-central-1.compute.amazonaws.com:27017/UPKY_MONGODB_DEV')
-            db = makingConnection["UPKY_MONGODB_DEV"]
-            connection = db['RE_ENTREPRISE']
-        except Exception as e:
-            print(e)
-            
-        documents = connection.find({"ACTIONNAIRES" : { "$exists" : False }})
-
-        for doc in documents:
-            self.NEQ_LIST.append(doc['NEQ'])
-
-        makingConnection.close()
-
-        return None
 
     
     def start_requests(self):
